@@ -18,7 +18,7 @@ const Form = (props) => {
                 <input
                     type='text'
                     name='name'
-                    placeholder='Enter your name'
+                    placeholder='Enter Name'
                     value={props.values.name}
                     onChange={handleChange}
                 />
@@ -27,7 +27,7 @@ const Form = (props) => {
                 <input
                     type='email'
                     name='email'
-                    placeholder='Enter your email'
+                    placeholder='Enter Email'
                     value={props.values.email}
                     onChange={handleChange}
                 />
@@ -43,6 +43,7 @@ const Form = (props) => {
                     <option value='project manager'>Project Manager</option>
                 </select>
             </label>
+            <input type='submit' value='Create Team!' />
         </form>
     )
 }

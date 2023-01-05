@@ -12,6 +12,7 @@ function App() {
 
   const onSubmit = () => {
     setTeamMembers([values, ...teamMembers]);
+    setValues({name: '', email: '', role: ''});
   }
 
   return (
@@ -22,6 +23,13 @@ function App() {
         change={onChange}
         submit={onSubmit}
       />
+      {teamMembers.map((member, idx) => {
+        return (
+          <div key={idx}>
+            {member.name}, {member.email}, {member.role}
+          </div>
+        )
+      })}
     </div>
   );
 }
