@@ -2,6 +2,11 @@ import React from 'react';
 
 const Form = (props) => {
 
+    const handleChange = event => {
+        const { name, value } = event.target;
+        props.handleChange(name, value);
+    }
+
     return (
         <form>
             <label>Name
